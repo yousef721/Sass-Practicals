@@ -1,0 +1,77 @@
+// Import Variables 
+@use "../helpers/variables" as *;
+
+.header {
+    padding: 20px 0;
+    overflow: hidden;
+    border-bottom: 1px solid $greyColor;
+    .logo {
+        position: relative;
+        @media (min-width: #{$minSmall}) {
+            float: none;
+            width: 100%;
+            text-align: center;
+        }
+        @media (min-width: #{$minMedium}) {
+            width: 30%;
+            float: $floatLeft;
+            text-align: $text-left;
+        }
+        h1 {
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+        i {
+            background-color: $redColor;
+            color: white;
+            padding: 8px;
+            font-size: 40px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            display: none;
+            @media (max-width: #{$maxMobile}) {
+                display: block;
+            }
+        }
+    }
+    .navbar {
+        width: 70%;
+        float: $floatLeft;
+        background-color: $redColor;
+        border-radius: 15px;
+        overflow: hidden;
+        @media (max-width: #{$maxSmall}) {
+            float: none;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+        @media (max-width: #{$maxMobile}) {
+            display: none;
+            border-radius: 0;
+        }
+        li {
+            width: 20%;
+            float: $floatLeft;
+            font-size: 18px;
+            text-align: center;
+            @media (max-width: #{$maxMobile}) {
+                float: none;
+                display: block;
+                width: 100%;
+                text-align: $text-left;
+                padding-left: 10px;
+            }
+            a {
+                display: block;
+                padding: 20px 10px;
+                color: #eee;
+                &:hover {
+                    color: #ddd;
+                }
+            }
+        }
+    }
+}

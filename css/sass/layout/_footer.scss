@@ -1,0 +1,122 @@
+@use "../helpers/variables" as *;
+
+.footer {
+    background-color: #e2e2e2;
+    padding-top: 30px;
+    margin-top: 50px;
+    overflow: hidden;
+    .gallery, .info, .contact {
+        float: $floatLeft;
+    }
+    .gallery {
+        width: 50%;
+        @media (max-width: $maxSmall) {
+            width: 100%;
+        }
+        .img-box {
+            margin-bottom: 30px;
+            @media (max-width: $maxSmall) {
+                display: none;
+            }
+            img {
+                float: $floatLeft;
+                width: 150px;
+                height: 100px;
+            }
+        }
+        .text {
+            float: $floatLeft;
+            margin-right: 15px;
+            margin-left: 15px;
+            width: calc(100% - 180px);
+            @media (max-width: $maxSmall) {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            h4 {
+                color: $redColor;
+                margin: 0 0 10px;
+            }
+            p {
+                color: #888;
+                line-height: 1.5;
+                margin-top: 0;
+            }
+        }
+    }
+    .info {
+        width: 25%;
+        @media (max-width: $maxSmall) {
+            width: 40%;
+        }
+        @media (max-width: $maxMobile) {
+            width: 100%;
+        }
+        ul {
+            color: #888;
+            line-height: 1.8;
+            li {
+                span {
+                    color: $redColor;
+                    font-weight: bold;
+                }
+            }
+        }
+        h4 {
+            color: #888;
+            font-weight: bold;
+            margin: 0;
+        }
+        p {
+            color: #888;
+            margin-top: 8px;
+        }
+    }
+    .contact {
+        width: 25%;
+        @media (max-width: $maxSmall) {
+            width: 60%;
+        }
+        @media (max-width: $maxMobile) {
+            width: 100%;
+        }
+        input[type=text], input[type=email], textarea {
+            border: 1px solid #c9c9c9;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 10px;
+            width: 100%;
+        }
+        input[type=submit] {
+            @media (max-width: $maxMobile) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .section-title {
+        color: #777;
+        font-weight: normal;
+    }
+    .copyright {
+        padding: 25px 0;
+        border-top: 1px solid #c5c5cc;
+        overflow: hidden;
+        .text, .author {
+            float: $floatLeft;
+            width: 50%;
+            color: #888;
+            @media (max-width: $maxMobile) {
+                float: none;
+                width: 100%;
+            }
+        }
+        .author {
+            text-align: $text-right;
+            @media (max-width: $maxMobile) {
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    }
+}

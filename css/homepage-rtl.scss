@@ -1,0 +1,87 @@
+// Import Variables
+@use './sass/helpers/variables' as *;
+
+$floatLeft: right;
+$floatRight: left;
+
+$text-left: right;
+$text-right: left;
+
+.header {
+    .logo {
+        @media (min-width: #{$minMedium}) {
+            width: 30%;
+            float: $floatLeft;
+            text-align: $text-left;
+        }
+        .the-toggler {
+            right: auto;
+            left: 0;
+        }
+    }
+    .navbar {
+        float: $floatLeft;
+        li {
+            float: $floatLeft;
+            @media (max-width: #{$maxMobile}) {
+                text-align: $text-left;
+            }
+        }
+    }
+}
+/* Start Services */
+.services {
+    .services-box {
+        @media (min-width: $minSmall) {
+            float: $floatLeft;
+        }
+    }
+}
+/* End Services */
+/* Start players */
+.our-players {
+    .players-box {
+        @media (min-width: $minSmall) {
+            float: $floatLeft;
+        }
+        @media (min-width: $minMedium) {
+            text-align: $text-left;
+        }
+    }
+}
+/* End Services */
+/* Start Lorem */
+.lorem-ipsum {
+    .lorem-box {
+        @media (min-width: $minSmall) {
+            float: $floatLeft;
+        }
+    }
+}
+/* End Lorem */
+.footer {
+    .gallery, .info, .contact {
+        float: $floatLeft;
+    }
+    .gallery {
+        .img-box {
+            img {
+                float: $floatLeft;
+            }
+        }
+        .text {
+            float: $floatLeft;
+        }
+    }
+    .copyright {
+        .text, .author {
+            float: $floatLeft;
+        }
+        .author {
+            text-align: $text-right;
+            @media (max-width: $maxMobile) {
+                text-align: center;
+            }
+        }
+    }
+}

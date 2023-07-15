@@ -1,0 +1,18 @@
+// Imoprt Variables
+@use './sass/helpers/variables' as *;
+// Imoprt mixins
+@use "./sass/helpers/mixins";
+// Imoprt grid
+@use "./sass/layout/grid";
+// Import Global Page
+@use "./sass/pages/globalpage";
+// Imoprt header
+@use "./sass/layout/header";
+// Import heading 
+@use "./sass/component/heading";
+// Imoprt Buttons
+@use "./sass/component/Buttons";
+// Imoprt homepage
+@use "./sass/pages/homepage";
+// Imoprt footer
+@use "./sass/layout/footer";
